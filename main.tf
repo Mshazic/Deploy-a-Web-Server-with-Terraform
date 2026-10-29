@@ -120,7 +120,7 @@ resource "aws_instance" "web_server" {
     dnf install -y httpd
     systemctl start httpd
     systemctl enable httpd
-        echo "<h1>Updated with Terraform!</h1><p>Infrastructure changes are just code changes. BY Senzo</p>" > /var/www/html/index.html
+    echo "<h1>Hello from Terraform!</h1><p>This infrastructure was defined as code.</p>" > /var/www/html/index.html
   EOF
 
   tags = {
